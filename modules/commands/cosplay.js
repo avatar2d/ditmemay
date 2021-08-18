@@ -1,9 +1,9 @@
 module.exports.config = {
-	name: "cosplay",
+	name: "neko",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "VanHung",
-	description: "Xem ảnh Cosplay",
+	credits: "hau",
+	description: "Xem ảnh neko",
 	commandCategory: "Hình Ảnh",
 	usages: "cosplay",
 	cooldowns: 5
@@ -13,7 +13,7 @@ module.exports.run = async ({ api, event }) => {
 	const axios = require('axios');
 	const request = require('request');
 	const fs = require("fs");
-	axios.get('https://api.berver.tech/cosplay').then(res => {
+	axios.get('https://img-hololive-api.up.railway.app/api').then(res => {
 	let ext = res.data.data.substring(res.data.data.lastIndexOf(".") + 1);
 	let callback = function () {
 					api.sendMessage({
